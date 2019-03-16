@@ -25,11 +25,21 @@ Add User to Database
 >>> db.session.add(user_2)
 >>> db.session.commit()
 ````
-Get all Users in the database
+Querying the database
 ```python
 >>> User.query.all()
 [User('Daniel', 'Daniel@dan.com', 'default.jpg), User('Josh', 'Josh@dan.com', 'default.jpg)]
 >>>
 >>> User.query.filter_by(username='Josh').all()
 [User('Josh', 'Josh@dan.com', 'default.jpg)]
+>>>
+>>> user = User.query.filter_by(username='Josh').first()
+>>> user.id
+2
+>>> user.email
+'Josh@dan.com'
+>>> user.password
+'password'
+>>> user.image_file
+'default.jpg'
 ```
