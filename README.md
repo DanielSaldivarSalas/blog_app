@@ -1,10 +1,10 @@
 
 This project includes
 
-flask
-python3.6
+flask <br>
+python3.6 <br>
 CSS:
 - Bootstrap
-
-flask-sqlalchemy = ORM
-flask-wtf = wtforms
+<br>
+flask-sqlalchemy = ORM <br>
+flask-wtf = wtforms <br>
