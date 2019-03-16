@@ -6,4 +6,5 @@ python3.6
 CSS:
 - Bootstrap
 
-wt-forms
+flask-sqlalchemy = ORM
+flask-wtf = wtforms
