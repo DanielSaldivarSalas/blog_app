@@ -29,4 +29,7 @@ Get all Users in the database
 ```python
 >>> User.query.all()
 [User('Daniel', 'Daniel@dan.com', 'default.jpg), User('Josh', 'Josh@dan.com', 'default.jpg)]
+>>>
+>>> User.query.filter_by(username='Josh').all()
+[User('Josh', 'Josh@dan.com', 'default.jpg)]
 ```
