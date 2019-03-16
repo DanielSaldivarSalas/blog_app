@@ -2,7 +2,7 @@
 This project includes
 
 flask <br>
-python3.6 <br>
+python3.7 <br>
 CSS:
 - Bootstrap
 <br>
