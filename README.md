@@ -18,7 +18,7 @@ flask-wtf = wtforms <br>
 
 Add User to Database
 ```python
->>> from blog_app import User
+>>> from blog_app.models import User, 
 >>> user_1 = User(username='Daniel', email='Daniel@dan.com', password='password')
 >>> db.session.add(user_1)
 >>> user_2 = User(username='Josh', email='Josh@dan.com', password='password')
@@ -48,6 +48,7 @@ Adding posts to a user
 'default.jpg'
 >>> user.posts
 []
+>>> from blog_app.models import Post
 >>> post_1 = Post(title='Blog 1', content='First post concent!', user_id=user.id)
 >>> post_2 = Post(title='Blog 2', content='Second Post concent!', user_id=user.id)
 >>> db.session.add(post_1)
