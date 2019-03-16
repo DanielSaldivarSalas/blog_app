@@ -32,7 +32,11 @@ Querying the database
 >>>
 >>> User.query.filter_by(username='Josh').all()
 [User('Josh', 'Josh@dan.com', 'default.jpg)]
->>>
+
+```
+
+Adding posts to a user
+```python
 >>> user = User.query.filter_by(username='Josh').first()
 >>> user.id
 2
@@ -42,4 +46,13 @@ Querying the database
 'password'
 >>> user.image_file
 'default.jpg'
+>>> user.posts
+[]
+>>> post_1 = Post(title='Blog 1', content='First post concent!', user_id=user.id)
+>>> post_2 = Post(title='Blog 2', content='Second Post concent!', user_id=user.id)
+>>> db.session.add(post_1)
+>>> db.session.add(post_2)
+>>> db.session.commit()
+>>> user.posts
+[Post('Blog 1', '2019-03-16 03:47:50.163513'), Post('Blog 2', '2019-03-16 03:47:50.167985')]```
 ```
