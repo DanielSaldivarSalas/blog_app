@@ -54,5 +54,17 @@ Adding posts to a user
 >>> db.session.add(post_2)
 >>> db.session.commit()
 >>> user.posts
-[Post('Blog 1', '2019-03-16 03:47:50.163513'), Post('Blog 2', '2019-03-16 03:47:50.167985')]```
+[Post('Blog 1', '2019-03-16 03:47:50.163513'), Post('Blog 2', '2019-03-16 03:47:50.167985')]
+>>> post = Post.query.first()
+>>> post.author
+User('Josh', 'Josh@dan.com', 'default.jpg)
+
+```
+
+Delete your tables and data
+```python
+>>> db.drop_all() #removes all tables and data in the tables
+>>> db.create_all() #creates our tables
+>>> User.query.all()
+[]
 ```
